@@ -28,62 +28,6 @@ plt.grid()
 plt.show()
 
 
-import numpy as np
-
-# 1. Создание массивов
-# Одномерный массив
-array_1d = np.array([1, 2, 3, 4, 5])
-print("Одномерный массив:", array_1d)
-
-# Двумерный массив (матрица)
-array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-print("Двумерный массив:\n", array_2d)
-
-# Создание массива нулей и единиц
-zeros_array = np.zeros((2, 3))  # Массив 2x3 заполненный нулями
-ones_array = np.ones((2, 3))     # Массив 2x3 заполненный единицами
-print("Массив нулей:\n", zeros_array)
-print("Массив единиц:\n", ones_array)
-
-# 2. Выполнение математических операций с массивами
-# Математические операции
-array_a = np.array([1, 2, 3])
-array_b = np.array([4, 5, 6])
-
-# Сложение массивов
-sum_array = array_a + array_b
-print("Сумма массивов:", sum_array)
-
-# Умножение на скаляр
-scaled_array = array_a * 2
-print("Умножение на скаляр:", scaled_array)
-
-# Скалярное произведение двух массивов
-dot_product = np.dot(array_a, array_b)
-print("Скалярное произведение:", dot_product)
-
-# 3. Изменение формы массива
-reshaped_array = array_2d.reshape(3, 2)  # Изменение формы массива на 3x2
-print("Измененный массив:\n", reshaped_array)
-
-# 4. Применение функций для анализа данных
-# Генерация случайных чисел и вычисление статистики
-random_numbers = np.random.rand(1000)  # Генерация массива из 1000 случайных чисел от 0 до 1
-
-# Среднее значение
-mean_value = np.mean(random_numbers)
-print("Среднее значение:", mean_value)
-
-# Стандартное отклонение
-std_deviation = np.std(random_numbers)
-print("Стандартное отклонение:", std_deviation)
-
-# Максимальное и минимальное значение
-max_value = np.max(random_numbers)
-min_value = np.min(random_numbers)
-print("Максимальное значение:", max_value)
-print("Минимальное значение:", min_value)
-
 
 from PIL import Image, ImageFilter
 
