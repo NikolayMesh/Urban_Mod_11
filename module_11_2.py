@@ -4,9 +4,9 @@ def introspection_info(obj):
     # Сбор информации об объекте
     info = {
         'type': str(type(obj)).replace("<class '", "").replace("'>", ""),  # Убираем лишние символы
-        'attributes': dir(obj),  # Получаем все атрибуты и методы
+        'attributes': [attr for attr in dir(obj) if not callable(getattr(obj, attr)) and not attr.startswith("__")],  # Получаем атрибуты
         'methods': [method for method in dir(obj) if callable(getattr(obj, method))],  # Фильтруем только методы
-        'module': obj.__module__ if hasattr(obj, '__module__') else None,  # Получаем модуль объекта, если он есть
+        'module': obj.__module__ if hasattr(obj, '__module__') else '__main__',  # Получаем модуль объекта, если он есть
     }
 
     return info
